@@ -1,0 +1,17 @@
+replicaCount: 1
+
+image:
+  repository: harshithagmini8/simple-api
+  tag: "1.0"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8000
+
+ingress:
+  enabled: true
+  host: harshitha.ddns.net
+  tlsSecret: simple-api-tls
+  clusterIssuer: letsencrypt-prod
