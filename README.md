@@ -2,6 +2,44 @@
 
 ✨ This project demonstrates an **end-to-end DevOps deployment pipeline** using a **Flask API**, **Docker**, **Helm**, **Kubernetes (k3s)**, **Traefik Ingress**, **No-IP domain**, and **cert-manager with TLS**.
 
+
+workflow --
+Developer
+   ↓
+Write Simple API Server (HTTP endpoint)
+   ↓
+Test API locally (browser / curl)
+   ↓
+Create Dockerfile
+   ↓
+Build Docker Image
+   ↓
+Run Container Locally & Test
+   ↓
+Tag Docker Image
+   ↓
+Push Image to DockerHub
+   ↓
+Initialize Helm Chart
+   ↓
+Configure Deployment & Service (image, replicas, ports)
+   ↓
+Validate Helm Chart (helm lint)
+   ↓
+Set up Local Kubernetes Cluster (Minikube / Kind)
+   ↓
+Deploy Application using Helm
+   ↓
+Kubernetes Pods & Service Running
+   ↓
+Install Ingress Controller (NGINX)
+   ↓
+Create Ingress Resource
+   ↓
+Configure Domain (myapp.local → hosts file)
+   ↓
+Access Application via Domain Name
+
 ---
 
 ## 🧰 Tools & Technologies Used ⚙️
